@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript</title>
+    </head>
+    <body>
+        
+        <div id="app2">
+            <input type="text" name="nome"/>
+            <input type="text" name="nome2"/>
+            <button class="botao">Adicionar</button>
+        </div>
+        
+
+        <script>
+        /*  var inputElement = document.getElementById('nome');
+            var inputElement2 = document.getElementsByTagName('input')[0];
+        
+            var inputElement3 = document.getElementsByClassName('nome'); // Pode-se colocar 0 
+        */
+
+           // var inputElement4 = document.querySelector('div#app2 input');
+
+           // var inputElement5 = document.querySelector('input[name=nome]');
+
+           // var inputElement5 = document.querySelectorAll('input');
+          // console.log(inputElement5);
+
+          var btnElement = document.querySelector('button.botao');
+          
+          btnElement.onclick = function(){
+              alert('botão clicado');
+          }
+
+        </script>
+
+    </body>
+</html>
