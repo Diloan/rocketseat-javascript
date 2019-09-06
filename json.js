@@ -4,7 +4,7 @@
     idade: 24
     sexo: 'M'
 },{
-    nome2: Juliana
+    nome: 'Fulano'
     sobrenome: 'Ciclano'
     idade: 26
     sexo: 'F'
