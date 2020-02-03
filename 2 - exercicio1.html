@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript</title>
+    </head>
+    <body>
+        
+        <div id="app">
+            <div class="box"></div>
+            <button  class="botao">Adicionar quadrado</button>
+        </div>
+        
+
+        <script>
+            function criarQuadro(){
+                
+            }
+            var boxElement = document.querySelector('.box');
+            var btnElement = document.querySelector('button.botao');
+            
+
+            btnElement.onclick = function(){
+                var criaCaixa = document.createElement('div');
+                var containerElement = document.querySelector('#app')
+                
+                
+                criaCaixa.style.width = 100;
+                criaCaixa.style.height = 100;
+                criaCaixa.style.backgroundColor = '#f00';
+                criaCaixa.style.marginBottom = 3;
+                containerElement.appendChild(criaCaixa);
+            }
+                
+        </script>
+
+    </body>
+</html>

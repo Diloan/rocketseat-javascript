@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Exercicio 5</title>
+        <meta charset="UTF-8"
+    </head>
+    <body>
+
+        <script>
+            //Solucão não completa, pesquisar mais sobre ela, sobre o metodo 'join()'
+            function habilidadesUsuarios(usuarios) {
+                
+                for(var valor of usuarios){
+                    var resultado = 'O ' + valor.nome + ' possui as habilidades: ' + valor.habilidades;
+                    console.log(resultado);
+                }
+            }
+
+            var usuarios = [
+                    {
+                        nome: "Diego",
+                        habilidades: ["Javascript", "ReactJS", "Redux"]
+                    },
+                    {
+                        nome: "Gabriel",
+                        habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+                    }
+                        ];         
+            habilidadesUsuarios(usuarios);
+            
+           
+        </script>
+    </body>
+</html>
+<html>
+

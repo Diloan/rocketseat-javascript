@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript</title>
+    </head>
+    <body>
+        
+        <div id="app">
+            <div class="box"></div>
+            <button  class="botao">Adicionar quadrado</button>
+        </div>
+        
+
+        <script>
+            function criarQuadro(){
+                
+            }
+            var boxElement = document.querySelector('.box');
+            var btnElement = document.querySelector('button.botao');
+            
+            function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+            }
+
+            btnElement.onclick = function(){
+                var newColor = getRandomColor(); // #E943F0  
+                console.log(newColor);
+                var criaCaixa = document.createElement('div');
+                var containerElement = document.querySelector('#app')
+                
+                
+                criaCaixa.style.width = 100;
+                criaCaixa.style.height = 100;
+                criaCaixa.style.backgroundColor = newColor;
+                criaCaixa.style.marginBottom = 3;
+                containerElement.appendChild(criaCaixa);
+            }
+
+
+                         
+        </script>
+
+    </body>
+</html>

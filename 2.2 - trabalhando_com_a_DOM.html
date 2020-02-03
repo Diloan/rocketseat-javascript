@@ -7,7 +7,7 @@
         
         <div id="app2">
             <input type="text" name="nome"/>
-            <input type="text" name="nome2"/>
+           <!-- <input type="text" name="nome2"/> -->
             <button class="botao">Adicionar</button>
         </div>
         
@@ -26,10 +26,12 @@
            // var inputElement5 = document.querySelectorAll('input');
           // console.log(inputElement5);
 
+          var inputElement = document.querySelector('input[name=nome]');
           var btnElement = document.querySelector('button.botao');
           
           btnElement.onclick = function(){
-              alert('botão clicado');
+              var text = inputElement.value;
+              alert(text);
           }
 
         </script>
