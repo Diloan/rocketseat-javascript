@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript</title>
+    </head>
+    <body>
+        
+        <div>
+            <ul id="lista">
+
+            </ul>
+            <button  class="botao">Adicionar item</button>
+        </div>
+        
+
+        <script>
+            var nomes, item, tamanho, i;
+            nomes =  ["Diego", "Gabriel", "Lucas"];
+            tamanho = nomes.length;
+            ElementLista = document.querySelector('#lista');
+            item = '<ul>';
+            onload = function(){
+                for (i = 0; i < tamanho; i++) {
+                    item += "<li>" + nomes[i] + "</li>";
+                //ElementLista.appendChild(item);
+                console.log('teste do onLoad');
+                }
+            }
+            item+= '</ul>';
+            ElementLista.setAttribute('li', 'Diloan');
+
+            //var ListElement = document.querySelector('#lista');
+            var btnElement = document.querySelector('button.botao');
+            
+            
+
+            btnElement.onclick = function(){
+               
+                var criaItem = document.createElement('li');
+                var containerElement = document.querySelector('#lista');
+                
+
+                containerElement.appendChild(criaItem);
+            }
+
+
+                         
+        </script>
+
+    </body>
+</html>
