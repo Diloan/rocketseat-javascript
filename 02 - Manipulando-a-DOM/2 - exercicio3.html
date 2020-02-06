@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript</title>
+    </head>
+    <body>
+        
+        <div>
+            <ul id="lista">
+
+            </ul>
+            <input id="item">
+            <button  class="botao">Adicionar item</button>
+        </div>
+        
+        <script>
+            var nomes, item, tamanho, i;
+            nomes =  ["Diego", "Gabriel", "Lucas"];
+            tamanho = nomes.length;
+            var elementList = document.querySelector('#lista');
+            var btnElement = document.querySelector('button.botao');
+            var inputELement = document.querySelector('input[id=item]');
+
+            for(i = 0; i < tamanho; i++){
+                var liElement = document.createElement('li');
+                var textElement = document.createTextNode(nomes[i]);
+                liElement.appendChild(textElement);
+                elementList.appendChild(liElement);
+            }
+            
+
+            btnElement.onclick = function(){
+                var text = inputELement.value;
+                var newLiElement = document.createElement('li');
+                var newText = document.createTextNode(text);
+                newLiElement.appendChild(newText);
+                var containerElement = document.querySelector('#lista');
+                
+
+                containerElement.appendChild(newLiElement);
+            }
+        
+        </script>
+    </body>
+</html>
