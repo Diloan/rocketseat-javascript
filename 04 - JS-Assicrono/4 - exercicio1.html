@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript</title>
+    </head>
+    <body>
+        
+        <script>
+            var idade = parseInt(prompt('Digite a sua idade: '), 10);
+
+            function checaIdade(idade) {
+                return new Promise(function(resolve, reject){
+                setTimeout(function(){
+                    if(idade >= 18){
+                        resolve();
+                    }else{
+                        reject();
+                    }
+            
+                }, 200)
+            }   
+        )};
+
+            checaIdade(idade)
+                .then(function() {
+                    console.log("Maior que 18")
+                })
+                .catch(function() {
+                    console.log("Menor que 18")
+            })
+        </script> 
+    </body>
+</html>

@@ -20,7 +20,7 @@ minhaPromise()
         console.log(response);
     })
     .catch(function(error){
-        console.log(error);
+        console.warn(error);
     });
 
     
