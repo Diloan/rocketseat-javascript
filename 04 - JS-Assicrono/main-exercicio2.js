@@ -1,26 +1,26 @@
-var listElement = document.querySelector('li');
+var listElement = document.querySelector('ul');
 var inputElement = document.querySelector('input');
 
-
 function renderizaRepositorios(repositorios){
+    
     for(repo of repositorios){
-        textElement = document.createTextNode(repo.name);
+        textNodeElement = document.createTextNode(repo.name);
         liElement = document.createElement('li');
 
-        listElement.appendChild(textElement);
+        liElement.appendChild(textNodeElement);
         listElement.appendChild(liElement);
     }
 }
 
-
 function listaRepositorios(){
 var user = inputElement.value;
+
+//if(!user) return;
 
 axios.get('https://api.github.com/users/'+ user +'/repos')
     .then(function(response){
         renderizaRepositorios(response.data)
-        console.log(response)
-    })
+    });
     // .catch(function(error){
     //     console.warn(error);
     // });
