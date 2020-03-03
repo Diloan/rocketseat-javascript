@@ -15,13 +15,13 @@ function renderizaRepositorios(repositorios){
 function listaRepositorios(){
 var user = inputElement.value;
 
-//if(!user) return;
+if(!user) return;
 
 axios.get('https://api.github.com/users/'+ user +'/repos')
     .then(function(response){
         renderizaRepositorios(response.data)
+    })
+    .catch(function(error){
+        console.warn(error);
     });
-    // .catch(function(error){
-    //     console.warn(error);
-    // });
 }
